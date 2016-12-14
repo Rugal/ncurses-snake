@@ -32,9 +32,9 @@ SET(SOURCE
     ${SOURCE}
     ${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/src/implement/Point.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/implement/Food.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/src/implement/Snake.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/implement/Board.cpp
 )
 FIND_PACKAGE(Curses REQUIRED)
 ADD_EXECUTABLE(Rugal ${SOURCE})
-TARGET_LINK_LIBRARIES(Rugal ${CURSES_LIBRARIES})
+TARGET_LINK_LIBRARIES(Rugal menu ${CURSES_LIBRARIES})
